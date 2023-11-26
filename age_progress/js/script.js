@@ -1,12 +1,15 @@
-$(function(){
-  var birthDay = "1999/1/22"; // safari対策で "/" に
+$(".js-progress-btn").on("click", function(){
+ $(".js-card").hide();
+ $(".js-progress").show();
 
+  // safari対策で "/" に
+  var birthDay = $(".js-birthdate").val().replaceAll("-", "/")
   var age = calcAge(birthDay);
   var progress = calcProgress(birthDay);
 
   $(".js-calc-age").html(age + "歳");
   $(".js-calc-progress").css("width", progress + "%");
-});
+})
 
 function calcAge(day){
   var birthDate = new Date(day);

@@ -7,8 +7,14 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="progress-container">
-    <div class="progress-bar js-calc-progress" style="width: 50%;"></div>
+  <div class="card js-card">
+    <label for="birthdate">生年月日:</label>
+    <input type="date" id="birthdate" class="js-birthdate">
+
+    <button id="changeStyleBtn" class="js-progress-btn">プログレスバーを表示</button>
+  </div>
+  <div class="progress-container js-progress" style="display: none;">
+    <div class="progress-bar js-calc-progress" style="width: 0%;"></div>
     <div class="progress-label js-calc-age"></div>
   </div>
   <script src="js/jquery-3.7.1.min.js"></script>
