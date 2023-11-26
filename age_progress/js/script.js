@@ -37,9 +37,9 @@ function calcProgress(day){
   var currentYear = currentDate.getFullYear();
 
   // 誕生日の日時
-  var birthDate = new Date(currentYear, month, day);
+  var birthDate = new Date(currentYear, month - 1, day);
 
-  var timeDiff = Math.abs(currentDate.getTime() - birthDate.getTime());
+  var timeDiff;
   if(currentDate.getTime() > birthDate.getTime()){
     timeDiff = Math.abs(currentDate.getTime() - birthDate.getTime());
   }else{
